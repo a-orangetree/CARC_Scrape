@@ -1,10 +1,8 @@
 ##INTRODUCTION
-This program scrapes relevant CARC/RARC codelist information from the Washington Publishing Company (WPC) and outputs an Excel file
-which can be merged into another file or imported into a database. These codelists are viewable free online. Viewing the lists 
-online, however is often inconvenient and must be manually copied into another medium (e.g. Excel) to be useful. 
+This program scrapes relevant CARC/RARC codelist information from the Washington Publishing Company (WPC) and outputs an Excel file which can be merged into another file or imported into a database. These codelists are viewable free online. Viewing the lists online, however is often inconvenient and must be manually copied into another medium (e.g. Excel) to be useful. 
 
 
-##WEBSITES USED
+##WEBSITES SCRAPED
 The CARC website can be found here: http://www.wpc-edi.com/reference/codelists/healthcare/claim-adjustment-reason-codes/
 The RARC website can be found here: http://www.wpc-edi.com/reference/codelists/healthcare/remittance-advice-remark-codes/
 
