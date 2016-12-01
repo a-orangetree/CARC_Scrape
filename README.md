@@ -1,5 +1,9 @@
 ##INTRODUCTION
-This program scrapes relevant CARC/RARC codelist information from the Washington Publishing Company (WPC) and outputs an Excel file which can be merged into another file or imported into a database. These codelists are viewable free online. Viewing the lists online, however is often inconvenient and must be manually copied into another medium (e.g. Excel) to be useful. 
+This program scrapes relevant CARC/RARC codelist information from the Washington Publishing Company (WPC) and outputs an Excel file. These codelists are viewable free online. Viewing the lists online, however is often inconvenient and must be manually copied into another medium (e.g. Excel) to be useful. 
+
+
+##REQUIREMENTS
+Python 3 is required, along with several libraries, all of which comes standard in Continuum's Anaconda Python distrbution (found here: https://www.continuum.io/downloads) 
 
 
 ##WEBSITES SCRAPED
