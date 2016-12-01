@@ -5,8 +5,7 @@ import numpy as np
 import time
 import pandas as pd
 
-#Enter the desired destination of the output file. If using a windows machine
-# please place an "r" prior to the first quote(')
+#Enter the desired destination of the output file. If using a windows machine please place an "r" prior to the first quote(')
 outputFilePath = '/path/to/output'
 
 
@@ -25,7 +24,7 @@ stopDates = []
 actives = []
 
 
-tags = soup('td', { "class" : "code" })
+tags = soup('td', { 'class' : 'code' })
 
 
 for tag in tags: 
@@ -34,7 +33,7 @@ for tag in tags:
     codes.append(str(code))
 
 
-tags = soup('td', {"class" : "description"})
+tags = soup('td', {'class' : 'description'})
 for tag in tags: 
     description = re.findall('^.*Note:\s\w|^.*<span',str(tag.contents))   
     description = str(description).replace('\\','')[4:-10]
@@ -54,11 +53,11 @@ for tag in tags:
     actives.append(str(active))
     
 
-intoDataFrame = {"Codes" : codes\
-                ,"Descriptions" : descriptions\
-                ,"Start Date" : startDates\
-                ,"Stop Date" : stopDates\
-                ,"Active" : actives}
+intoDataFrame = {'Codes' : codes\
+                ,'Descriptions' : descriptions\
+                ,'Start Date' : startDates\
+                ,'Stop Date' : stopDates\
+                ,'Active' : actives}
                 
 CARCs = pd.DataFrame(intoDataFrame)
 
@@ -92,7 +91,7 @@ startDates = []
 stopDates = []
 actives = []
 
-tags = soup('td', { "class" : "code" })
+tags = soup('td', { 'class' : 'code' })
 
 
 for tag in tags: 
@@ -101,7 +100,7 @@ for tag in tags:
     codes.append(str(code))
 
 
-tags = soup('td', {"class" : "description"})
+tags = soup('td', {'class' : 'description'})
 for tag in tags: 
     if 'Alert' in str(tag.contents):
         description = re.findall('^.*\s<s|^.*,<s',str(tag.contents)[63:])
@@ -126,11 +125,11 @@ for tag in tags:
     actives.append(str(active))
     
 
-intoDataFrame = {"Codes" : codes\
-                ,"Descriptions" : descriptions\
-                ,"Start Date" : startDates\
-                ,"Stop Date" : stopDates\
-                ,"Active" : actives}
+intoDataFrame = {'Codes' : codes\
+                ,'Descriptions' : descriptions\
+                ,'Start Date' : startDates\
+                ,'Stop Date' : stopDates\
+                ,'Active' : actives}
                 
 RARCs = pd.DataFrame(intoDataFrame)
 
@@ -140,9 +139,9 @@ RARCs['CARC/RARC'] = 'RARC'
 #print(RARCs)
 CARCs = CARCs.append(RARCs)
 
-todayYear = time.strftime("%Y")
-todayMonth = time.strftime("%m")
-todayDay = time.strftime("%d")
+todayYear = time.strftime('%Y')
+todayMonth = time.strftime('%m')
+todayDay = time.strftime('%d')
 
 
 CARCs.to_excel(outputFilePath+'_'+todayYear+todayMonth+todayDay+'.xlsx', index = False)
