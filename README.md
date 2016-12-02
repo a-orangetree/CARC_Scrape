@@ -5,6 +5,8 @@ This program scrapes relevant CARC/RARC codelist information from the Washington
 ##REQUIREMENTS
 Python 3 is required, along with several libraries, all of which comes standard in Continuum's Anaconda Python distrbution (found here: https://www.continuum.io/downloads) 
 
+Microsoft Excel, LibreOffice, or some other spreadsheet application will be needed to read the file. The file is currently output in .xslx format.
+
 
 ##WEBSITES SCRAPED
 The CARC website can be found here: http://www.wpc-edi.com/reference/codelists/healthcare/claim-adjustment-reason-codes/
